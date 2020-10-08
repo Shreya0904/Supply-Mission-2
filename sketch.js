@@ -1,5 +1,5 @@
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
-var packageBody,ground,boxCenter,boxCenterSprite;
+var packageBody,ground,boxCenter,boxCenterSprite,boxRight,boxRightSprite,boxLeft,boxLeftSprite;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -34,13 +34,20 @@ function setup() {
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, packageBody);
 	
- boxCenterSprite= createSprite(300,570,100,20);
+boxCenterSprite= createSprite(370,650,150,20);
 boxCenterSprite.shapeColor="red";	
 
+boxRightSprite= createSprite(400,700,200,20);
+boxRightSprite.shapeColor="red";	
 
-	 ground = new Ground(400,680,800,30); 
-	 boxCenter = new Ground(350,660,800,20);
-	 
+boxLeftSprite= createSprite(430,750,250,20);
+boxLeftSprite.shapeColor="red";	
+
+     ground = new Ground(400,665,800,30);
+	 boxCenter = new Ground(370,650,150,20);
+	 boxRight = new Ground(450,520,200,20);
+	 boxLeft = new Ground(270,570,250,20);
+
 
 	Engine.run(engine);
   
@@ -53,9 +60,7 @@ function draw() {
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
   drawSprites();
-  ground.display(); 
-  boxCenter.display();
-
+  
   text(mouseX+","+ mouseY,mouseX,mouseY);
 }
 
