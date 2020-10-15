@@ -45,8 +45,8 @@ boxLeftSprite.shapeColor="red";
 
      ground = new Ground(400,665,800,30);
 	 boxCenter = new Ground(370,650,150,20);
-	 boxRight = new Ground(450,520,200,20);
-	 boxLeft = new Ground(270,570,250,20);
+	 boxRight = new Ground(400,700,200,20);
+	 boxLeft = new Ground(430,750,250,20);
 
 
 	Engine.run(engine);
@@ -59,6 +59,15 @@ function draw() {
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
+
+  boxCenter.display();
+  boxRight.display();
+  boxLeft.display();
+  boxCenterSprite.display();
+  boxRightSprite.display();
+  boxLeftSprite.display();
+
+
   drawSprites();
   
   text(mouseX+","+ mouseY,mouseX,mouseY);
