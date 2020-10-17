@@ -37,16 +37,16 @@ function setup() {
 boxCenterSprite= createSprite(370,650,150,20);
 boxCenterSprite.shapeColor="red";	
 
-boxRightSprite= createSprite(400,700,200,20);
+boxRightSprite= createSprite(450,610,30,100);
 boxRightSprite.shapeColor="red";	
 
-boxLeftSprite= createSprite(430,750,250,20);
+boxLeftSprite= createSprite(290,610,30,100);
 boxLeftSprite.shapeColor="red";	
 
      ground = new Ground(400,665,800,30);
 	 boxCenter = new Ground(370,650,150,20);
 	 boxRight = new Ground(400,700,200,20);
-	 boxLeft = new Ground(430,750,250,20);
+	 boxLeft = new Ground(290,610,30,100);
 
 
 	Engine.run(engine);
@@ -59,13 +59,6 @@ function draw() {
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
-
-  boxCenter.display();
-  boxRight.display();
-  boxLeft.display();
-  boxCenterSprite.display();
-  boxRightSprite.display();
-  boxLeftSprite.display();
 
 
   drawSprites();
